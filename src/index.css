@@ -4,60 +4,64 @@
 
 /* CSS Variables for theming */
 :root {
-  /* Light theme colors */
-  --color-background: 249 250 251; /* gray-50 */
-  --color-foreground: 17 24 39; /* gray-900 */
-  --color-card: 255 255 255; /* white */
-  --color-card-foreground: 17 24 39; /* gray-900 */
-  --color-popover: 255 255 255; /* white */
-  --color-popover-foreground: 17 24 39; /* gray-900 */
-  --color-primary: 37 99 235; /* blue-600 */
-  --color-primary-foreground: 255 255 255; /* white */
-  --color-secondary: 243 244 246; /* gray-100 */
-  --color-secondary-foreground: 17 24 39; /* gray-900 */
-  --color-muted: 243 244 246; /* gray-100 */
-  --color-muted-foreground: 107 114 128; /* gray-500 */
-  --color-accent: 243 244 246; /* gray-100 */
-  --color-accent-foreground: 17 24 39; /* gray-900 */
-  --color-destructive: 239 68 68; /* red-500 */
-  --color-destructive-foreground: 255 255 255; /* white */
-  --color-border: 229 231 235; /* gray-200 */
-  --color-input: 229 231 235; /* gray-200 */
-  --color-ring: 37 99 235; /* blue-600 */
-  --color-success: 34 197 94; /* green-500 */
-  --color-warning: 245 158 11; /* amber-500 */
-  --color-info: 59 130 246; /* blue-500 */
+  /* Light theme colors - Modern vibrant palette */
+  --color-background: 251 252 254; /* Very light blue-gray */
+  --color-foreground: 15 23 42; /* Dark slate */
+  --color-card: 255 255 255; /* Pure white */
+  --color-card-foreground: 15 23 42; /* Dark slate */
+  --color-popover: 255 255 255; /* Pure white */
+  --color-popover-foreground: 15 23 42; /* Dark slate */
+  --color-primary: 139 92 246; /* Vibrant purple */
+  --color-primary-foreground: 255 255 255; /* White */
+  --color-secondary: 248 250 252; /* Light slate */
+  --color-secondary-foreground: 51 65 85; /* Medium slate */
+  --color-muted: 241 245 249; /* Very light slate */
+  --color-muted-foreground: 100 116 139; /* Medium gray */
+  --color-accent: 236 254 255; /* Very light cyan */
+  --color-accent-foreground: 22 78 99; /* Dark cyan */
+  --color-destructive: 239 68 68; /* Red */
+  --color-destructive-foreground: 255 255 255; /* White */
+  --color-border: 226 232 240; /* Light border */
+  --color-input: 226 232 240; /* Light input border */
+  --color-ring: 139 92 246; /* Purple focus ring */
+  --color-success: 16 185 129; /* Emerald */
+  --color-warning: 245 158 11; /* Amber */
+  --color-info: 59 130 246; /* Blue */
+  --color-gradient-start: 139 92 246; /* Purple */
+  --color-gradient-end: 219 39 119; /* Pink */
 }
 
 .dark {
-  /* Dark theme colors */
-  --color-background: 3 7 18; /* slate-950 */
-  --color-foreground: 248 250 252; /* slate-50 */
-  --color-card: 15 23 42; /* slate-800 */
-  --color-card-foreground: 248 250 252; /* slate-50 */
-  --color-popover: 15 23 42; /* slate-800 */
-  --color-popover-foreground: 248 250 252; /* slate-50 */
-  --color-primary: 59 130 246; /* blue-500 */
-  --color-primary-foreground: 15 23 42; /* slate-800 */
-  --color-secondary: 30 41 59; /* slate-700 */
-  --color-secondary-foreground: 248 250 252; /* slate-50 */
-  --color-muted: 30 41 59; /* slate-700 */
-  --color-muted-foreground: 148 163 184; /* slate-400 */
-  --color-accent: 30 41 59; /* slate-700 */
-  --color-accent-foreground: 248 250 252; /* slate-50 */
-  --color-destructive: 239 68 68; /* red-500 */
-  --color-destructive-foreground: 248 250 252; /* slate-50 */
-  --color-border: 30 41 59; /* slate-700 */
-  --color-input: 30 41 59; /* slate-700 */
-  --color-ring: 59 130 246; /* blue-500 */
-  --color-success: 34 197 94; /* green-500 */
-  --color-warning: 245 158 11; /* amber-500 */
-  --color-info: 59 130 246; /* blue-500 */
+  /* Dark theme colors - Enhanced dark palette */
+  --color-background: 2 6 23; /* Very dark blue */
+  --color-foreground: 248 250 252; /* Light slate */
+  --color-card: 15 23 42; /* Dark slate */
+  --color-card-foreground: 248 250 252; /* Light slate */
+  --color-popover: 15 23 42; /* Dark slate */
+  --color-popover-foreground: 248 250 252; /* Light slate */
+  --color-primary: 147 197 253; /* Light blue */
+  --color-primary-foreground: 15 23 42; /* Dark slate */
+  --color-secondary: 30 41 59; /* Medium dark slate */
+  --color-secondary-foreground: 248 250 252; /* Light slate */
+  --color-muted: 30 41 59; /* Medium dark slate */
+  --color-muted-foreground: 148 163 184; /* Medium light slate */
+  --color-accent: 22 78 99; /* Dark cyan */
+  --color-accent-foreground: 236 254 255; /* Light cyan */
+  --color-destructive: 248 113 113; /* Light red */
+  --color-destructive-foreground: 15 23 42; /* Dark slate */
+  --color-border: 51 65 85; /* Medium slate border */
+  --color-input: 51 65 85; /* Medium slate input */
+  --color-ring: 147 197 253; /* Light blue focus ring */
+  --color-success: 52 211 153; /* Light emerald */
+  --color-warning: 251 191 36; /* Light amber */
+  --color-info: 96 165 250; /* Light blue */
+  --color-gradient-start: 147 197 253; /* Light blue */
+  --color-gradient-end: 236 72 153; /* Light pink */
 }
 
 /* Base styles with theme support */
 * {
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
 /* Ensure proper contrast for focus states */
@@ -66,20 +70,61 @@
   outline-offset: 2px;
 }
 
-/* Custom scrollbar for dark mode */
+/* Custom gradient utilities */
+.gradient-bg {
+  background: linear-gradient(135deg, rgb(var(--color-gradient-start)), rgb(var(--color-gradient-end)));
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, rgb(var(--color-gradient-start)), rgb(var(--color-gradient-end)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Enhanced animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar for better UX */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
   background: rgb(var(--color-muted));
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(var(--color-muted-foreground));
+  background: linear-gradient(135deg, rgb(var(--color-gradient-start)), rgb(var(--color-gradient-end)));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(var(--color-foreground));
+  opacity: 0.8;
+}
+
+/* Enhanced card effects */
+.card-glow {
+  box-shadow: 0 0 20px -5px rgb(var(--color-primary) / 0.3);
+}
+
+.card-glow:hover {
+  box-shadow: 0 0 30px -5px rgb(var(--color-primary) / 0.5);
 }
