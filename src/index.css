@@ -1,76 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* CSS Variables for theming */
+/* CSS Variables for Arcade theming */
 :root {
-  /* Light theme colors - Modern vibrant palette */
-  --color-background: 251 252 254; /* Very light blue-gray */
-  --color-foreground: 15 23 42; /* Dark slate */
-  --color-card: 255 255 255; /* Pure white */
-  --color-card-foreground: 15 23 42; /* Dark slate */
-  --color-popover: 255 255 255; /* Pure white */
-  --color-popover-foreground: 15 23 42; /* Dark slate */
-  --color-primary: 139 92 246; /* Vibrant purple */
+  /* Arcade theme colors - Bright neon palette */
+  --color-background: 10 10 20; /* Very dark navy */
+  --color-foreground: 0 255 255; /* Electric cyan */
+  --color-card: 20 20 35; /* Dark purple-navy */
+  --color-card-foreground: 255 255 255; /* White */
+  --color-popover: 25 25 40; /* Dark purple */
+  --color-popover-foreground: 0 255 255; /* Electric cyan */
+  --color-primary: 255 20 147; /* Hot pink */
   --color-primary-foreground: 255 255 255; /* White */
-  --color-secondary: 248 250 252; /* Light slate */
-  --color-secondary-foreground: 51 65 85; /* Medium slate */
-  --color-muted: 241 245 249; /* Very light slate */
-  --color-muted-foreground: 100 116 139; /* Medium gray */
-  --color-accent: 236 254 255; /* Very light cyan */
-  --color-accent-foreground: 22 78 99; /* Dark cyan */
-  --color-destructive: 239 68 68; /* Red */
+  --color-secondary: 138 43 226; /* Blue violet */
+  --color-secondary-foreground: 255 255 255; /* White */
+  --color-muted: 30 30 50; /* Dark slate purple */
+  --color-muted-foreground: 147 197 253; /* Light blue */
+  --color-accent: 50 205 50; /* Lime green */
+  --color-accent-foreground: 0 0 0; /* Black */
+  --color-destructive: 255 69 0; /* Red orange */
   --color-destructive-foreground: 255 255 255; /* White */
-  --color-border: 226 232 240; /* Light border */
-  --color-input: 226 232 240; /* Light input border */
-  --color-ring: 139 92 246; /* Purple focus ring */
-  --color-success: 16 185 129; /* Emerald */
-  --color-warning: 245 158 11; /* Amber */
-  --color-info: 59 130 246; /* Blue */
-  --color-gradient-start: 139 92 246; /* Purple */
-  --color-gradient-end: 219 39 119; /* Pink */
+  --color-border: 138 43 226; /* Blue violet border */
+  --color-input: 30 30 50; /* Dark input */
+  --color-ring: 0 255 255; /* Electric cyan focus ring */
+  --color-success: 50 205 50; /* Lime green */
+  --color-warning: 255 165 0; /* Orange */
+  --color-info: 0 191 255; /* Deep sky blue */
+  --color-gradient-start: 255 20 147; /* Hot pink */
+  --color-gradient-end: 0 255 255; /* Electric cyan */
+  --color-neon-blue: 0 255 255; /* Electric cyan */
+  --color-neon-pink: 255 20 147; /* Hot pink */
+  --color-neon-green: 50 205 50; /* Lime green */
+  --color-neon-orange: 255 165 0; /* Orange */
+  --color-neon-purple: 138 43 226; /* Blue violet */
 }
 
 .dark {
-  /* Dark theme colors - Enhanced dark palette */
-  --color-background: 2 6 23; /* Very dark blue */
-  --color-foreground: 248 250 252; /* Light slate */
-  --color-card: 15 23 42; /* Dark slate */
-  --color-card-foreground: 248 250 252; /* Light slate */
-  --color-popover: 15 23 42; /* Dark slate */
-  --color-popover-foreground: 248 250 252; /* Light slate */
-  --color-primary: 147 197 253; /* Light blue */
-  --color-primary-foreground: 15 23 42; /* Dark slate */
-  --color-secondary: 30 41 59; /* Medium dark slate */
-  --color-secondary-foreground: 248 250 252; /* Light slate */
-  --color-muted: 30 41 59; /* Medium dark slate */
-  --color-muted-foreground: 148 163 184; /* Medium light slate */
-  --color-accent: 22 78 99; /* Dark cyan */
-  --color-accent-foreground: 236 254 255; /* Light cyan */
-  --color-destructive: 248 113 113; /* Light red */
-  --color-destructive-foreground: 15 23 42; /* Dark slate */
-  --color-border: 51 65 85; /* Medium slate border */
-  --color-input: 51 65 85; /* Medium slate input */
-  --color-ring: 147 197 253; /* Light blue focus ring */
-  --color-success: 52 211 153; /* Light emerald */
-  --color-warning: 251 191 36; /* Light amber */
-  --color-info: 96 165 250; /* Light blue */
-  --color-gradient-start: 147 197 253; /* Light blue */
-  --color-gradient-end: 236 72 153; /* Light pink */
+  /* Dark arcade theme - Even more intense */
+  --color-background: 5 5 15; /* Deeper dark navy */
+  --color-foreground: 0 255 255; /* Electric cyan */
+  --color-card: 15 15 25; /* Very dark purple */
+  --color-card-foreground: 255 255 255; /* White */
+  --color-popover: 20 20 30; /* Dark purple */
+  --color-popover-foreground: 0 255 255; /* Electric cyan */
+  --color-primary: 255 20 147; /* Hot pink */
+  --color-primary-foreground: 255 255 255; /* White */
+  --color-secondary: 138 43 226; /* Blue violet */
+  --color-secondary-foreground: 255 255 255; /* White */
+  --color-muted: 25 25 40; /* Dark slate purple */
+  --color-muted-foreground: 147 197 253; /* Light blue */
+  --color-accent: 50 205 50; /* Lime green */
+  --color-accent-foreground: 0 0 0; /* Black */
+  --color-destructive: 255 69 0; /* Red orange */
+  --color-destructive-foreground: 255 255 255; /* White */
+  --color-border: 138 43 226; /* Blue violet border */
+  --color-input: 25 25 40; /* Dark input */
+  --color-ring: 0 255 255; /* Electric cyan focus ring */
+  --color-success: 50 205 50; /* Lime green */
+  --color-warning: 255 165 0; /* Orange */
+  --color-info: 0 191 255; /* Deep sky blue */
+  --color-gradient-start: 255 20 147; /* Hot pink */
+  --color-gradient-end: 0 255 255; /* Electric cyan */
 }
 
-/* Base styles with theme support */
+/* Base styles with arcade theme support */
 * {
-  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-/* Ensure proper contrast for focus states */
+/* Arcade font classes */
+.font-arcade {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.font-retro {
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Enhanced focus states with neon glow */
 *:focus-visible {
-  outline: 2px solid rgb(var(--color-ring));
-  outline-offset: 2px;
+  outline: none;
+  box-shadow: 0 0 0 2px rgb(var(--color-ring)), 0 0 20px rgb(var(--color-ring) / 0.5);
 }
 
-/* Custom gradient utilities */
+/* Arcade gradient utilities */
 .gradient-bg {
   background: linear-gradient(135deg, rgb(var(--color-gradient-start)), rgb(var(--color-gradient-end)));
 }
@@ -82,7 +98,57 @@
   background-clip: text;
 }
 
-/* Enhanced animations */
+/* Neon glow effects */
+.neon-glow-pink {
+  box-shadow: 0 0 10px rgb(var(--color-neon-pink) / 0.5), 0 0 20px rgb(var(--color-neon-pink) / 0.3), 0 0 30px rgb(var(--color-neon-pink) / 0.1);
+}
+
+.neon-glow-blue {
+  box-shadow: 0 0 10px rgb(var(--color-neon-blue) / 0.5), 0 0 20px rgb(var(--color-neon-blue) / 0.3), 0 0 30px rgb(var(--color-neon-blue) / 0.1);
+}
+
+.neon-glow-green {
+  box-shadow: 0 0 10px rgb(var(--color-neon-green) / 0.5), 0 0 20px rgb(var(--color-neon-green) / 0.3), 0 0 30px rgb(var(--color-neon-green) / 0.1);
+}
+
+.neon-border-pink {
+  border: 2px solid rgb(var(--color-neon-pink));
+  box-shadow: 0 0 10px rgb(var(--color-neon-pink) / 0.3), inset 0 0 10px rgb(var(--color-neon-pink) / 0.1);
+}
+
+.neon-border-blue {
+  border: 2px solid rgb(var(--color-neon-blue));
+  box-shadow: 0 0 10px rgb(var(--color-neon-blue) / 0.3), inset 0 0 10px rgb(var(--color-neon-blue) / 0.1);
+}
+
+/* Scanline effect for retro feel */
+.scanlines::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 255, 255, 0.05) 2px,
+    rgba(0, 255, 255, 0.05) 4px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Grid background for arcade feel */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Enhanced animations with arcade feel */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -92,39 +158,104 @@
   animation: float 3s ease-in-out infinite;
 }
 
-@keyframes pulse-slow {
+@keyframes pulse-neon {
+  0%, 100% { 
+    opacity: 1; 
+    box-shadow: 0 0 10px rgb(var(--color-neon-pink) / 0.5), 0 0 20px rgb(var(--color-neon-pink) / 0.3);
+  }
+  50% { 
+    opacity: 0.8; 
+    box-shadow: 0 0 20px rgb(var(--color-neon-pink) / 0.7), 0 0 30px rgb(var(--color-neon-pink) / 0.5);
+  }
+}
+
+.animate-pulse-neon {
+  animation: pulse-neon 2s ease-in-out infinite;
+}
+
+@keyframes flicker {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.8; }
+  75% { opacity: 0.9; }
+  85% { opacity: 0.7; }
 }
 
-.animate-pulse-slow {
-  animation: pulse-slow 2s ease-in-out infinite;
+.animate-flicker {
+  animation: flicker 3s ease-in-out infinite;
 }
 
-/* Custom scrollbar for better UX */
+@keyframes glow-rotate {
+  0% { 
+    box-shadow: 0 0 20px rgb(var(--color-neon-pink) / 0.5), 0 0 40px rgb(var(--color-neon-blue) / 0.3); 
+  }
+  33% { 
+    box-shadow: 0 0 20px rgb(var(--color-neon-blue) / 0.5), 0 0 40px rgb(var(--color-neon-green) / 0.3); 
+  }
+  66% { 
+    box-shadow: 0 0 20px rgb(var(--color-neon-green) / 0.5), 0 0 40px rgb(var(--color-neon-pink) / 0.3); 
+  }
+  100% { 
+    box-shadow: 0 0 20px rgb(var(--color-neon-pink) / 0.5), 0 0 40px rgb(var(--color-neon-blue) / 0.3); 
+  }
+}
+
+.animate-glow-rotate {
+  animation: glow-rotate 4s ease-in-out infinite;
+}
+
+/* Custom scrollbar with neon glow */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
   background: rgb(var(--color-muted));
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(135deg, rgb(var(--color-gradient-start)), rgb(var(--color-gradient-end)));
-  border-radius: 4px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgb(var(--color-neon-pink) / 0.3);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  opacity: 0.8;
+  box-shadow: 0 0 15px rgb(var(--color-neon-pink) / 0.5);
 }
 
-/* Enhanced card effects */
+/* Enhanced card effects with neon glow */
 .card-glow {
   box-shadow: 0 0 20px -5px rgb(var(--color-primary) / 0.3);
 }
 
 .card-glow:hover {
-  box-shadow: 0 0 30px -5px rgb(var(--color-primary) / 0.5);
+  box-shadow: 0 0 30px -5px rgb(var(--color-primary) / 0.6), 0 0 50px -10px rgb(var(--color-neon-blue) / 0.2);
+}
+
+/* Arcade button styles */
+.btn-arcade {
+  position: relative;
+  background: linear-gradient(145deg, rgb(var(--color-primary)), rgb(var(--color-secondary)));
+  border: 2px solid rgb(var(--color-neon-pink));
+  box-shadow: 
+    0 0 10px rgb(var(--color-neon-pink) / 0.3),
+    inset 0 2px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  text-shadow: 0 0 10px rgb(var(--color-neon-blue) / 0.8);
+}
+
+.btn-arcade:hover {
+  box-shadow: 
+    0 0 20px rgb(var(--color-neon-pink) / 0.6),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-arcade:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 0 15px rgb(var(--color-neon-pink) / 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }

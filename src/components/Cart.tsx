@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Plus, Minus, ShoppingBag, CreditCard } from 'lucide-react';
+import { X, Plus, Minus, ShoppingBag, CreditCard, Gamepad2 } from 'lucide-react';
 import { useCart } from '../hooks/useCart';
 
 interface CartProps {
@@ -18,7 +18,7 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
       clearCart();
       setIsCheckingOut(false);
       onClose();
-      alert('Order placed successfully! Thank you for your purchase.');
+      alert('MISSION COMPLETE! Your gear has been delivered to the staging area.');
     }, 2000);
   };
 
@@ -26,73 +26,72 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
 
   return (
     <div className="fixed inset-0 z-50 overflow-hidden">
-      <div className="absolute inset-0 bg-black/50" onClick={onClose}></div>
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" onClick={onClose}></div>
       
-      <div className="absolute right-0 top-0 h-full w-full max-w-md bg-card shadow-xl transform transition-transform duration-300">
+      <div className="absolute right-0 top-0 h-full w-full max-w-md bg-card/90 backdrop-blur-sm shadow-xl transform transition-transform duration-300 neon-border-pink border-l-4">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b border-border">
-          <h2 className="text-lg font-semibold text-foreground flex items-center space-x-2">
-            <ShoppingBag className="h-5 w-5" />
-            <span>Shopping Cart ({cart.itemCount})</span>
+        <div className="flex items-center justify-between p-6 border-b-2 border-neon-blue neon-glow-blue">
+          <h2 className="text-lg font-arcade text-foreground flex items-center space-x-3">
+            <ShoppingBag className="h-6 w-6 text-neon-pink" />
+            <span>INVENTORY ({cart.itemCount})</span>
           </h2>
           <button
             onClick={onClose}
-            className="rounded-md text-muted-foreground hover:text-foreground hover:bg-muted p-2 transition-colors duration-200"
+            className="rounded-lg text-muted-foreground hover:text-foreground btn-arcade p-3 transition-all duration-200"
           >
             <X className="h-5 w-5" />
           </button>
         </div>
 
         {/* Cart Items */}
-        <div className="flex-1 overflow-y-auto p-6">
+        <div className="flex-1 overflow-y-auto p-6 relative scanlines">
           {cart.items.length === 0 ? (
             <div className="text-center py-12">
-              <ShoppingBag className="mx-auto h-12 w-12 text-muted-foreground/50 mb-4" />
-              <h3 className="text-lg font-medium text-foreground mb-1">Your cart is empty</h3>
-              <p className="text-muted-foreground">Start shopping to add items to your cart</p>
+              <Gamepad2 className="mx-auto h-16 w-16 text-muted-foreground/50 mb-6 animate-pulse-neon" />
+              <h3 className="text-lg font-retro font-bold text-foreground mb-2">INVENTORY EMPTY</h3>
+              <p className="text-muted-foreground font-retro text-sm">Add some gear to your loadout</p>
             </div>
           ) : (
             <div className="space-y-4">
               {cart.items.map((item) => (
-                <div key={item.product.id} className="flex items-center space-x-4 bg-muted rounded-lg p-4">
-                  <img
-                    src={item.product.image}
-                    alt={item.product.name}
-                    className="w-16 h-16 object-cover rounded-lg"
-                  />
-                  
-                  <div className="flex-1 min-w-0">
-                    <h4 className="text-sm font-medium text-foreground truncate">
-                      {item.product.name}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">${item.product.price.toFixed(2)}</p>
-                    
-                    <div className="flex items-center mt-2 space-x-2">
-                      <button
-                        onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                        className="p-1 rounded-md hover:bg-muted/80 transition-colors duration-200"
-                      >
-                        <Minus className="h-4 w-4" />
-                      </button>
-                      <span className="text-sm font-medium w-8 text-center">{item.quantity}</span>
-                      <button
-                        onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                        className="p-1 rounded-md hover:bg-muted/80 transition-colors duration-200"
-                      >
-                        <Plus className="h-4 w-4" />
-                      </button>
+                <div key={item.id} className="bg-card/60 rounded-lg p-4 neon-border-blue border backdrop-blur-sm">
+                  <div className="flex items-center space-x-4">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-16 h-16 object-cover rounded-lg neon-border-green border filter brightness-110"
+                    />
+                    <div className="flex-1">
+                      <h3 className="font-retro font-bold text-sm text-foreground mb-1">
+                        {item.name.toUpperCase()}
+                      </h3>
+                      <p className="text-xs text-muted-foreground font-retro mb-2">{item.category}</p>
+                      <div className="flex items-center justify-between">
+                        <span className="font-arcade text-sm gradient-text">${item.price.toFixed(2)}</span>
+                        <div className="flex items-center space-x-2">
+                          <button
+                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                            className="w-8 h-8 rounded bg-destructive/20 text-destructive hover:bg-destructive/30 border border-destructive/50 flex items-center justify-center transition-colors duration-200"
+                          >
+                            <Minus className="h-3 w-3" />
+                          </button>
+                          <span className="w-8 text-center font-retro font-bold text-foreground">
+                            {item.quantity}
+                          </span>
+                          <button
+                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                            className="w-8 h-8 rounded bg-accent/20 text-accent hover:bg-accent/30 border border-accent/50 flex items-center justify-center transition-colors duration-200"
+                          >
+                            <Plus className="h-3 w-3" />
+                          </button>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  
-                  <div className="text-right">
-                    <p className="text-sm font-semibold text-foreground">
-                      ${(item.product.price * item.quantity).toFixed(2)}
-                    </p>
                     <button
-                      onClick={() => removeFromCart(item.product.id)}
-                      className="text-destructive hover:text-destructive/80 text-sm mt-1 transition-colors duration-200"
+                      onClick={() => removeFromCart(item.id)}
+                      className="text-destructive hover:text-destructive/80 p-2 rounded-lg bg-destructive/10 border border-destructive/30 transition-colors duration-200"
                     >
-                      Remove
+                      <X className="h-4 w-4" />
                     </button>
                   </div>
                 </div>
@@ -103,27 +102,31 @@ export const Cart = ({ isOpen, onClose }: CartProps) => {
 
         {/* Footer */}
         {cart.items.length > 0 && (
-          <div className="border-t border-border p-6 space-y-4">
-            <div className="flex justify-between items-center text-lg font-semibold">
-              <span>Total:</span>
-              <span>${cart.total.toFixed(2)}</span>
+          <div className="border-t-2 border-neon-pink p-6 bg-card/80 backdrop-blur-sm">
+            <div className="flex items-center justify-between mb-6">
+              <span className="font-arcade text-lg text-foreground">TOTAL CREDITS:</span>
+              <span className="font-arcade text-2xl gradient-text neon-glow-pink">
+                ${cart.total.toFixed(2)}
+              </span>
             </div>
             
-            <button
-              onClick={handleCheckout}
-              disabled={isCheckingOut}
-              className="w-full bg-primary hover:bg-primary/90 disabled:bg-primary/50 text-primary-foreground px-6 py-3 rounded-lg flex items-center justify-center space-x-2 transition-all duration-200 transform hover:scale-105 active:scale-95 font-medium"
-            >
-              <CreditCard className="h-5 w-5" />
-              <span>{isCheckingOut ? 'Processing...' : 'Checkout'}</span>
-            </button>
-            
-            <button
-              onClick={clearCart}
-              className="w-full text-muted-foreground hover:text-foreground py-2 text-sm transition-colors duration-200"
-            >
-              Clear Cart
-            </button>
+            <div className="space-y-3">
+              <button
+                onClick={handleCheckout}
+                disabled={isCheckingOut}
+                className="w-full btn-arcade text-white py-4 rounded-lg flex items-center justify-center space-x-3 font-retro font-bold transition-all duration-300 disabled:opacity-50"
+              >
+                <CreditCard className="h-5 w-5" />
+                <span>{isCheckingOut ? 'PROCESSING...' : 'DEPLOY EQUIPMENT'}</span>
+              </button>
+              
+              <button
+                onClick={clearCart}
+                className="w-full bg-destructive/20 text-destructive border-2 border-destructive/50 py-3 rounded-lg font-retro font-bold hover:bg-destructive/30 transition-all duration-300"
+              >
+                CLEAR INVENTORY
+              </button>
+            </div>
           </div>
         )}
       </div>
