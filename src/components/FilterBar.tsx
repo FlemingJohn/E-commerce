@@ -1,5 +1,5 @@
 import React from 'react';
-import { Filter, Sparkles } from 'lucide-react';
+import { Filter, Gamepad2 } from 'lucide-react';
 
 interface FilterBarProps {
   categories: string[];
@@ -9,41 +9,41 @@ interface FilterBarProps {
 
 export const FilterBar = ({ categories, selectedCategory, onCategoryChange }: FilterBarProps) => {
   return (
-    <div className="bg-card/80 backdrop-blur-sm border-b border-border/50 py-6 shadow-sm">
+    <div className="bg-card/60 backdrop-blur-sm border-b-2 border-neon-blue neon-glow-blue py-8 shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center space-x-6">
-          <div className="flex items-center space-x-3 text-muted-foreground">
-            <div className="p-2 rounded-full bg-primary/10">
-              <Filter className="h-5 w-5 text-primary" />
+        <div className="flex items-center space-x-8">
+          <div className="flex items-center space-x-4 text-muted-foreground">
+            <div className="p-3 rounded-lg neon-border-pink bg-primary/20">
+              <Filter className="h-6 w-6 text-neon-pink" />
             </div>
-            <span className="font-semibold text-foreground">Categories:</span>
+            <span className="font-arcade text-foreground text-sm">SELECT CATEGORY:</span>
           </div>
           
-          <div className="flex space-x-3 overflow-x-auto pb-2">
+          <div className="flex space-x-4 overflow-x-auto pb-2">
             <button
               onClick={() => onCategoryChange('All')}
-              className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 whitespace-nowrap transform hover:scale-105 ${
+              className={`px-8 py-4 rounded-lg font-retro text-sm font-bold transition-all duration-300 whitespace-nowrap transform hover:scale-105 ${
                 selectedCategory === 'All'
-                  ? 'gradient-bg text-white shadow-lg'
-                  : 'bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary border border-border/50'
+                  ? 'btn-arcade text-white neon-glow-pink'
+                  : 'neon-border-blue bg-card/40 text-muted-foreground hover:bg-primary/20 hover:text-neon-blue border-2'
               }`}
             >
-              <div className="flex items-center space-x-2">
-                <Sparkles className="h-4 w-4" />
-                <span>All Products</span>
+              <div className="flex items-center space-x-3">
+                <Gamepad2 className="h-5 w-5" />
+                <span>ALL GAMES</span>
               </div>
             </button>
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => onCategoryChange(category)}
-                className={`px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 whitespace-nowrap transform hover:scale-105 ${
+                className={`px-8 py-4 rounded-lg font-retro text-sm font-bold transition-all duration-300 whitespace-nowrap transform hover:scale-105 ${
                   selectedCategory === category
-                    ? 'gradient-bg text-white shadow-lg'
-                    : 'bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary border border-border/50'
+                    ? 'btn-arcade text-white neon-glow-pink'
+                    : 'neon-border-blue bg-card/40 text-muted-foreground hover:bg-primary/20 hover:text-neon-blue border-2'
                 }`}
               >
-                {category}
+                {category.toUpperCase()}
               </button>
             ))}
           </div>
