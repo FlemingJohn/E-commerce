@@ -9,12 +9,12 @@ interface FilterBarProps {
 
 export const FilterBar = ({ categories, selectedCategory, onCategoryChange }: FilterBarProps) => {
   return (
-    <div className="bg-card/60 backdrop-blur-sm border-b-2 border-neon-blue neon-glow-blue py-8 shadow-xl">
+    <div className="bg-card/60 backdrop-blur-sm border-b-2 border-border py-8 shadow-xl">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center space-x-8">
           <div className="flex items-center space-x-4 text-muted-foreground">
-            <div className="p-3 rounded-lg neon-border-pink bg-primary/20">
-              <Filter className="h-6 w-6 text-neon-pink" />
+            <div className="p-3 rounded-lg border border-border bg-primary/20">
+              <Filter className="h-6 w-6 text-primary" />
             </div>
             <span className="font-arcade text-foreground text-sm">SELECT CATEGORY:</span>
           </div>
@@ -24,8 +24,8 @@ export const FilterBar = ({ categories, selectedCategory, onCategoryChange }: Fi
               onClick={() => onCategoryChange('All')}
               className={`px-8 py-4 rounded-lg font-retro text-sm font-bold transition-all duration-300 whitespace-nowrap transform hover:scale-105 ${
                 selectedCategory === 'All'
-                  ? 'btn-arcade text-white neon-glow-pink'
-                  : 'neon-border-blue bg-card/40 text-muted-foreground hover:bg-primary/20 hover:text-neon-blue border-2'
+                  ? 'btn-arcade text-primary-foreground'
+                  : 'border-2 border-border bg-card/40 text-muted-foreground hover:bg-primary/20 hover:text-foreground'
               }`}
             >
               <div className="flex items-center space-x-3">
@@ -39,8 +39,8 @@ export const FilterBar = ({ categories, selectedCategory, onCategoryChange }: Fi
                 onClick={() => onCategoryChange(category)}
                 className={`px-8 py-4 rounded-lg font-retro text-sm font-bold transition-all duration-300 whitespace-nowrap transform hover:scale-105 ${
                   selectedCategory === category
-                    ? 'btn-arcade text-white neon-glow-pink'
-                    : 'neon-border-blue bg-card/40 text-muted-foreground hover:bg-primary/20 hover:text-neon-blue border-2'
+                    ? 'btn-arcade text-primary-foreground'
+                    : 'border-2 border-border bg-card/40 text-muted-foreground hover:bg-primary/20 hover:text-foreground'
                 }`}
               >
                 {category.toUpperCase()}

@@ -6,64 +6,64 @@
 
 /* CSS Variables for Arcade theming */
 :root {
-  /* Arcade theme colors - Bright neon palette */
-  --color-background: 10 10 20; /* Very dark navy */
-  --color-foreground: 0 255 255; /* Electric cyan */
-  --color-card: 20 20 35; /* Dark purple-navy */
-  --color-card-foreground: 255 255 255; /* White */
-  --color-popover: 25 25 40; /* Dark purple */
-  --color-popover-foreground: 0 255 255; /* Electric cyan */
-  --color-primary: 255 20 147; /* Hot pink */
+  /* Arcade theme colors - White background with black accents */
+  --color-background: 255 255 255; /* Pure white */
+  --color-foreground: 0 0 0; /* Pure black */
+  --color-card: 250 250 250; /* Light gray */
+  --color-card-foreground: 0 0 0; /* Black */
+  --color-popover: 255 255 255; /* White */
+  --color-popover-foreground: 0 0 0; /* Black */
+  --color-primary: 0 0 0; /* Black primary */
   --color-primary-foreground: 255 255 255; /* White */
-  --color-secondary: 138 43 226; /* Blue violet */
+  --color-secondary: 64 64 64; /* Dark gray */
   --color-secondary-foreground: 255 255 255; /* White */
-  --color-muted: 30 30 50; /* Dark slate purple */
-  --color-muted-foreground: 147 197 253; /* Light blue */
-  --color-accent: 50 205 50; /* Lime green */
-  --color-accent-foreground: 0 0 0; /* Black */
-  --color-destructive: 255 69 0; /* Red orange */
+  --color-muted: 245 245 245; /* Very light gray */
+  --color-muted-foreground: 96 96 96; /* Medium gray */
+  --color-accent: 0 0 0; /* Black accent */
+  --color-accent-foreground: 255 255 255; /* White */
+  --color-destructive: 220 38 38; /* Red */
   --color-destructive-foreground: 255 255 255; /* White */
-  --color-border: 138 43 226; /* Blue violet border */
-  --color-input: 30 30 50; /* Dark input */
-  --color-ring: 0 255 255; /* Electric cyan focus ring */
-  --color-success: 50 205 50; /* Lime green */
-  --color-warning: 255 165 0; /* Orange */
-  --color-info: 0 191 255; /* Deep sky blue */
-  --color-gradient-start: 255 20 147; /* Hot pink */
-  --color-gradient-end: 0 255 255; /* Electric cyan */
-  --color-neon-blue: 0 255 255; /* Electric cyan */
-  --color-neon-pink: 255 20 147; /* Hot pink */
-  --color-neon-green: 50 205 50; /* Lime green */
-  --color-neon-orange: 255 165 0; /* Orange */
-  --color-neon-purple: 138 43 226; /* Blue violet */
+  --color-border: 224 224 224; /* Light gray border */
+  --color-input: 249 249 249; /* Very light gray input */
+  --color-ring: 0 0 0; /* Black focus ring */
+  --color-success: 34 197 94; /* Green */
+  --color-warning: 245 158 11; /* Orange */
+  --color-info: 59 130 246; /* Blue */
+  --color-gradient-start: 0 0 0; /* Black */
+  --color-gradient-end: 64 64 64; /* Dark gray */
+  --color-neon-blue: 59 130 246; /* Blue accent */
+  --color-neon-pink: 219 39 119; /* Pink accent */
+  --color-neon-green: 34 197 94; /* Green accent */
+  --color-neon-orange: 245 158 11; /* Orange accent */
+  --color-neon-purple: 147 51 234; /* Purple accent */
 }
 
 .dark {
-  /* Dark arcade theme - Even more intense */
-  --color-background: 5 5 15; /* Deeper dark navy */
-  --color-foreground: 0 255 255; /* Electric cyan */
-  --color-card: 15 15 25; /* Very dark purple */
-  --color-card-foreground: 255 255 255; /* White */
-  --color-popover: 20 20 30; /* Dark purple */
-  --color-popover-foreground: 0 255 255; /* Electric cyan */
-  --color-primary: 255 20 147; /* Hot pink */
+  /* Dark theme - Light gray background with black accents */
+  --color-background: 248 248 248; /* Very light gray */
+  --color-foreground: 0 0 0; /* Pure black */
+  --color-card: 255 255 255; /* Pure white cards */
+  --color-card-foreground: 0 0 0; /* Black */
+  --color-popover: 255 255 255; /* White */
+  --color-popover-foreground: 0 0 0; /* Black */
+  --color-primary: 0 0 0; /* Black primary */
   --color-primary-foreground: 255 255 255; /* White */
-  --color-secondary: 138 43 226; /* Blue violet */
+  --color-secondary: 64 64 64; /* Dark gray */
   --color-secondary-foreground: 255 255 255; /* White */
-  --color-muted: 25 25 40; /* Dark slate purple */
-  --color-muted-foreground: 147 197 253; /* Light blue */
-  --color-accent: 50 205 50; /* Lime green */
-  --color-accent-foreground: 0 0 0; /* Black */
-  --color-destructive: 255 69 0; /* Red orange */
+  --color-muted: 242 242 242; /* Light gray */
+  --color-muted-foreground: 128 128 128; /* Medium gray */
+  --color-accent: 0 0 0; /* Black accent */
+  --color-accent-foreground: 255 255 255; /* White */
+  --color-destructive: 220 38 38; /* Red */
   --color-destructive-foreground: 255 255 255; /* White */
-  --color-border: 138 43 226; /* Blue violet border */
-  --color-input: 25 25 40; /* Dark input */
-  --color-ring: 0 255 255; /* Electric cyan focus ring */
-  --color-success: 50 205 50; /* Lime green */
-  --color-warning: 255 165 0; /* Orange */
-  --color-info: 0 191 255; /* Deep sky blue */
-  --color-gradient-start: 255 20 147; /* Hot pink */
-  --color-gradient-end: 0 255 255; /* Electric cyan */
+  --color-border: 224 224 224; /* Light gray border */
+  --color-input: 249 249 249; /* Very light gray input */
+  --color-ring: 0 0 0; /* Black focus ring */
+  --color-success: 34 197 94; /* Green */
+  --color-warning: 245 158 11; /* Orange */
+  --color-info: 59 130 246; /* Blue */
+  --color-gradient-start: 0 0 0; /* Black */
+  --color-gradient-end: 64 64 64; /* Dark gray */
 }
 
 /* Base styles with arcade theme support */
@@ -133,8 +133,8 @@
     0deg,
     transparent,
     transparent 2px,
-    rgba(0, 255, 255, 0.05) 2px,
-    rgba(0, 255, 255, 0.05) 4px
+    rgba(0, 0, 0, 0.02) 2px,
+    rgba(0, 0, 0, 0.02) 4px
   );
   pointer-events: none;
   z-index: 1;
@@ -143,8 +143,8 @@
 /* Grid background for arcade feel */
 .grid-bg {
   background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
