@@ -13,17 +13,17 @@ export const ThemeToggle = () => {
 
   return (
     <div className="relative">
-      <div className="flex items-center bg-card/60 backdrop-blur-sm neon-border-blue border rounded-lg p-1 transition-all duration-300">
+      <div className="flex items-center bg-card/60 backdrop-blur-sm border border-border rounded-lg p-1 transition-all duration-300">
         {themes.map(({ value, icon: Icon, label }) => (
           <button
             key={value}
             onClick={() => setTheme(value)}
             className={`
               relative flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-300 font-retro
-              focus:outline-none neon-glow-blue
+              focus:outline-none
               ${theme === value 
-                ? 'btn-arcade text-white neon-glow-pink' 
-                : 'text-muted-foreground hover:text-neon-blue hover:bg-card/40 border border-transparent hover:border-neon-blue/50'
+                ? 'btn-arcade text-primary-foreground' 
+                : 'text-muted-foreground hover:text-foreground hover:bg-card/40 border border-transparent hover:border-border'
               }
             `}
             aria-label={label}

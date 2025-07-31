@@ -19,7 +19,7 @@ export const ProductCard = ({ product, onProductClick }: ProductCardProps) => {
   return (
     <div
       onClick={() => onProductClick(product)}
-      className="bg-card/80 backdrop-blur-sm rounded-xl neon-border-blue border-2 overflow-hidden cursor-pointer group hover:neon-glow-pink transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 animate-float relative"
+      className="bg-card/80 backdrop-blur-sm rounded-xl border-2 border-border overflow-hidden cursor-pointer group hover:shadow-lg transition-all duration-500 transform hover:-translate-y-3 hover:scale-105 animate-float relative"
     >
       {/* Scanline overlay */}
       <div className="absolute inset-0 scanlines pointer-events-none z-10"></div>
@@ -31,24 +31,24 @@ export const ProductCard = ({ product, onProductClick }: ProductCardProps) => {
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 filter group-hover:brightness-110"
         />
         <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <button className="p-3 bg-card/90 backdrop-blur-sm rounded-lg neon-border-green border-2 hover:neon-glow-green transition-all duration-200">
-            <Zap className="h-5 w-5 text-neon-green" />
+          <button className="p-3 bg-card/90 backdrop-blur-sm rounded-lg border-2 border-border hover:border-ring transition-all duration-200">
+            <Zap className="h-5 w-5 text-primary" />
           </button>
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         
         {/* Power indicator */}
-        <div className="absolute top-4 left-4 bg-accent/90 backdrop-blur-sm px-3 py-1 rounded-full neon-border-green border">
+        <div className="absolute top-4 left-4 bg-accent/90 backdrop-blur-sm px-3 py-1 rounded-full border border-border">
           <span className="text-xs font-arcade text-accent-foreground">POWER ON</span>
         </div>
       </div>
       
       <div className="p-6 relative z-20">
         <div className="flex items-center justify-between mb-4">
-          <span className="text-xs font-arcade gradient-text bg-primary/20 px-3 py-2 rounded-lg neon-border-pink border">
+          <span className="text-xs font-arcade gradient-text bg-primary/20 px-3 py-2 rounded-lg border border-border">
             {product.category.toUpperCase()}
           </span>
-          <div className="flex items-center space-x-2 bg-card/50 px-3 py-1 rounded-lg neon-border-blue border">
+          <div className="flex items-center space-x-2 bg-card/50 px-3 py-1 rounded-lg border border-border">
             <Star className="h-4 w-4 fill-warning text-warning animate-pulse" />
             <span className="text-sm font-retro font-bold text-foreground">{product.rating}</span>
             <span className="text-xs text-muted-foreground font-retro">({product.reviews})</span>
@@ -65,7 +65,7 @@ export const ProductCard = ({ product, onProductClick }: ProductCardProps) => {
         
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
-            <span className="text-2xl font-arcade gradient-text neon-glow-blue">
+            <span className="text-2xl font-arcade gradient-text">
               ${product.price.toFixed(2)}
             </span>
             <span className="text-xs text-muted-foreground font-retro">PREMIUM GEAR</span>
@@ -73,7 +73,7 @@ export const ProductCard = ({ product, onProductClick }: ProductCardProps) => {
           
           <button
             onClick={handleAddToCart}
-            className="btn-arcade hover:opacity-90 text-white px-6 py-3 rounded-lg flex items-center space-x-2 transition-all duration-300 transform hover:scale-110 active:scale-95 font-retro font-bold text-sm"
+            className="btn-arcade hover:opacity-90 text-primary-foreground px-6 py-3 rounded-lg flex items-center space-x-2 transition-all duration-300 transform hover:scale-110 active:scale-95 font-retro font-bold text-sm"
           >
             <ShoppingCart className="h-4 w-4" />
             <span className="hidden sm:inline">ADD</span>
